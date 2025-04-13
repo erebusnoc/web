@@ -75,6 +75,22 @@
       50% { opacity: 1; transform: scale(1.5); }
     }
 
+    .doggy {
+      position: fixed;
+      bottom: 50px;
+      left: -150px;
+      width: 120px;
+      height: 80px;
+      background: url('https://media.giphy.com/media/3oriO0OEd9QIDdllqo/giphy.gif') no-repeat center/contain;
+      animation: walkDog 20s linear infinite;
+      z-index: 1;
+    }
+
+    @keyframes walkDog {
+      from { left: -150px; }
+      to { left: 110%; }
+    }
+
     .heart-container {
       display: flex;
       flex-direction: column;
@@ -188,13 +204,12 @@
   <div class="flower" style="left: 50%; animation-delay: 4s;"></div>
   <div class="flower" style="left: 70%; animation-delay: 6s;"></div>
   <div class="flower" style="left: 90%; animation-delay: 8s;"></div>
-  
-  <!-- Glowing flowers -->
   <div class="glow-flower" style="top: 200px; left: 100px;"></div>
   <div class="glow-flower" style="top: 400px; left: 300px;"></div>
   <div class="glow-flower" style="top: 600px; left: 50%;"></div>
   <div class="glow-flower" style="top: 500px; left: 70%;"></div>
   <div class="glow-flower" style="top: 250px; left: 80%;"></div>
+  <div class="doggy"></div>
 
   <div class="heart-container">
     <h1>I Love You ❤️</h1>
