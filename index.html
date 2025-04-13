@@ -1,122 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>To My Galaxy Girl 💖</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>I Love You 🐶💖🌌</title>
   <style>
-    * { margin: 0; padding: 0; box-sizing: border-box; }
-
     body {
-      height: 100vh;
-      overflow: hidden;
-      font-family: 'Comic Sans MS', cursive, sans-serif;
-      color: #fff;
-      background: radial-gradient(ellipse at bottom, #1b2735 0%, #090a0f 100%);
+      margin: 0;
+      font-family: 'Comic Sans MS', cursive;
+      background: linear-gradient(to top, #ffe3ec, #f9d8f0);
+      overflow-x: hidden;
+    }
+
+    .heart-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      text-align: center;
+      padding-top: 50px;
+    }
+
+    .big-heart {
+      width: 300px;
+      height: 300px;
+      background-color: #ff4d88;
       position: relative;
+      clip-path: polygon(50% 0%, 100% 35%, 80% 100%, 50% 80%, 20% 100%, 0% 35%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      box-shadow: 0 0 20px rgba(0,0,0,0.2);
     }
 
-    .stars, .twinkling, .clouds {
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      display: block;
-      z-index: 0;
-    }
-
-    .stars {
-      background: url('https://i.imgur.com/5xx1Fzs.png') repeat;
-      animation: moveStars 200s linear infinite;
-    }
-
-    .twinkling {
-      background: url('https://i.imgur.com/wN5N3DN.png') repeat;
-      animation: moveTwinkling 200s linear infinite;
-    }
-
-    @keyframes moveStars {
-      from {background-position: 0 0;}
-      to {background-position: -10000px 5000px;}
-    }
-
-    @keyframes moveTwinkling {
-      from {background-position: 0 0;}
-      to {background-position: 10000px 5000px;}
+    .big-heart img {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 5px solid white;
     }
 
     h1 {
-      z-index: 10;
+      font-size: 2.5em;
+      color: #ff0033;
+      margin: 20px 0 10px;
+    }
+
+    .clouds {
+      background: url('https://i.imgur.com/QYbqsUB.png') repeat-x;
+      height: 150px;
+      animation: moveClouds 60s linear infinite;
+    }
+
+    @keyframes moveClouds {
+      0% { background-position: 0 0; }
+      100% { background-position: -10000px 0; }
+    }
+
+    .message {
+      background: #fff0f5;
+      margin: 40px auto;
+      width: 80%;
+      padding: 30px;
+      border-radius: 20px;
+      box-shadow: 0 0 20px rgba(255,105,180,0.2);
+      font-size: 1.2em;
       position: relative;
-      font-size: 3em;
+    }
+
+    .message::before {
+      content: 'To You!';
+      position: absolute;
+      top: -30px;
+      left: 20px;
+      font-size: 1.8em;
+      font-weight: bold;
+      color: #ff3366;
+    }
+
+    .sticker {
+      position: absolute;
+      bottom: -40px;
+      right: -20px;
+      width: 80px;
+    }
+
+    .confess-buttons {
       margin-top: 40px;
       text-align: center;
-    }
-
-    .confession {
-      z-index: 10;
-      position: relative;
-      text-align: center;
-      max-width: 700px;
-      margin: 30px auto;
-      font-size: 1.5em;
-      padding: 0 20px;
-    }
-
-    .dog {
-      width: 100px;
-      position: absolute;
-      animation: floatDog 10s ease-in-out infinite;
-    }
-
-    .dog:nth-child(1) {
-      top: 20%;
-      left: 10%;
-      animation-delay: 2s;
-    }
-
-    .dog:nth-child(2) {
-      top: 50%;
-      right: 10%;
-      animation-delay: 4s;
-    }
-
-    @keyframes floatDog {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-20px); }
-    }
-
-    .flower, .heart {
-      position: absolute;
-      width: 30px;
-      height: 30px;
-      background-size: cover;
-      animation: fall 10s infinite linear;
-      z-index: 1;
-    }
-
-    @keyframes fall {
-      0% { transform: translateY(-100px); opacity: 0; }
-      50% { opacity: 1; }
-      100% { transform: translateY(100vh); opacity: 0; }
-    }
-
-    .buttons {
-      z-index: 10;
-      text-align: center;
-      margin-top: 20px;
-      position: relative;
     }
 
     .btn {
       padding: 15px 30px;
       font-size: 1.2em;
+      margin: 10px;
       border: none;
       border-radius: 10px;
       cursor: pointer;
-      margin: 10px;
       background-color: #ff69b4;
       color: white;
-      transition: transform 0.3s;
+      transition: all 0.3s ease;
     }
 
     .btn:hover {
@@ -129,52 +112,33 @@
   </style>
 </head>
 <body>
-  <div class="stars"></div>
-  <div class="twinkling"></div>
+  <div class="clouds"></div>
 
-  <h1>To My Favorite Human 💫🐶</h1>
-
-  <div class="confession">
-    Hey love,  
-    Being with you feels like floating in the most beautiful galaxy.  
-    You're my moon, my stars, and all the constellations.  
-    So... will you be mine forever and ever?
+  <div class="heart-container">
+    <h1>I Love You ❤️</h1>
+    <div class="big-heart">
+      <img src="https://i.imgur.com/UvhzPzU.jpg" alt="us">
+    </div>
   </div>
 
-  <div class="buttons">
-    <button class="btn" onclick="sayYes()">YES</button>
-    <button class="btn" id="noBtn" onmouseover="moveNo()">NO</button>
+  <div class="message">
+    You may not realize it, but you live in every heartbeat of mine. When you smile, it feels like the whole world is filled with light. When you're sad, my heart aches with you. Every time I look at you, I want to say I have fallen deeply in love with you. My life is brighter, warmer, and lovelier with you in it.
+    <img src="https://i.imgur.com/o0Jw8mX.png" class="sticker" />
   </div>
 
-  <img src="https://i.imgur.com/zKjRaIE.png" class="dog">
-  <img src="https://i.imgur.com/ZzpZ9KW.png" class="dog">
+  <div class="confess-buttons">
+    <button class="btn" onclick="sayYes()">YES 💘</button>
+    <button class="btn" id="noBtn" onmouseover="moveNo()">NO 😝</button>
+  </div>
 
   <script>
-    // Falling flowers and hearts
-    const emojis = [
-      'https://i.imgur.com/lQTrUvl.png', // flower
-      'https://i.imgur.com/S9aUE4y.png', // dog heart
-      'https://i.imgur.com/EqvDdrk.png', // heart
-    ];
-
-    for (let i = 0; i < 30; i++) {
-      let el = document.createElement('div');
-      el.className = Math.random() > 0.5 ? 'flower' : 'heart';
-      el.style.left = Math.random() * 100 + 'vw';
-      el.style.top = -Math.random() * 100 + 'px';
-      el.style.animationDuration = (5 + Math.random() * 5) + 's';
-      el.style.backgroundImage = `url(${emojis[Math.floor(Math.random() * emojis.length)]})`;
-      el.style.width = el.style.height = `${20 + Math.random() * 20}px`;
-      document.body.appendChild(el);
-    }
-
     function sayYes() {
       document.body.innerHTML = `
-        <div class="stars"></div>
-        <div class="twinkling"></div>
-        <h1>💍 YAYYYY 💍</h1>
-        <div class="confession">You just made me the happiest man in the universe! Let's ride comets together 🪐🐾💖</div>
-        <img src="https://i.imgur.com/jY5x8sp.gif" class="dog" style="position:relative; top:20px;">
+        <div class="heart-container">
+          <h1>Yay! You said YES! 🥰</h1>
+          <p style="font-size:1.5em;">You just made me the happiest human in the galaxy!</p>
+          <img src="https://i.imgur.com/Lk8zeHg.gif" width="300" />
+        </div>
       `;
     }
 
