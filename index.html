@@ -59,6 +59,22 @@
       to {transform: translateY(100vh);}
     }
 
+    .glow-flower {
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: radial-gradient(circle, #ff69b4 0%, #ff1493 60%, transparent 70%);
+      box-shadow: 0 0 15px #ff69b4, 0 0 30px #ff1493, 0 0 45px #ff69b4;
+      animation: blink 2s infinite ease-in-out;
+      z-index: -1;
+    }
+
+    @keyframes blink {
+      0%, 100% { opacity: 0.7; transform: scale(1); }
+      50% { opacity: 1; transform: scale(1.5); }
+    }
+
     .heart-container {
       display: flex;
       flex-direction: column;
@@ -172,6 +188,13 @@
   <div class="flower" style="left: 50%; animation-delay: 4s;"></div>
   <div class="flower" style="left: 70%; animation-delay: 6s;"></div>
   <div class="flower" style="left: 90%; animation-delay: 8s;"></div>
+  
+  <!-- Glowing flowers -->
+  <div class="glow-flower" style="top: 200px; left: 100px;"></div>
+  <div class="glow-flower" style="top: 400px; left: 300px;"></div>
+  <div class="glow-flower" style="top: 600px; left: 50%;"></div>
+  <div class="glow-flower" style="top: 500px; left: 70%;"></div>
+  <div class="glow-flower" style="top: 250px; left: 80%;"></div>
 
   <div class="heart-container">
     <h1>I Love You ❤️</h1>
