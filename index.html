@@ -8,7 +8,7 @@
     body {
       margin: 0;
       font-family: 'Comic Sans MS', cursive;
-      background: linear-gradient(to top, #1e2959, #f9d8f0);
+      background: #0e144d;
       overflow-x: hidden;
       color: #fff;
     }
@@ -17,9 +17,9 @@
       position: fixed;
       width: 100%;
       height: 100%;
-      background: url('https://raw.githubusercontent.com/ardhiraka/images/main/stars-bg.png') repeat;
+      background: url('https://i.ibb.co/ZJVCZsh/stars.gif') repeat;
       animation: starry 200s linear infinite;
-      z-index: -1;
+      z-index: -2;
     }
 
     @keyframes starry {
@@ -27,24 +27,15 @@
       100% {background-position: -10000px 10000px;}
     }
 
-    .flower {
-      position: absolute;
-      width: 50px;
-      height: 50px;
-      background: url('https://raw.githubusercontent.com/ardhiraka/images/main/flower1.png') no-repeat center/cover;
-      animation: float 20s linear infinite;
-      opacity: 0.6;
-    }
-
-    @keyframes float {
-      from {transform: translateY(0);}
-      to {transform: translateY(100vh);}
-    }
-
     .clouds {
-      background: url('https://raw.githubusercontent.com/ardhiraka/images/main/clouds.png') repeat-x;
-      height: 150px;
+      background: url('https://i.ibb.co/2vwr4yJ/clouds.png') repeat-x;
+      height: 200px;
       animation: moveClouds 60s linear infinite;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      z-index: -1;
     }
 
     @keyframes moveClouds {
@@ -52,12 +43,27 @@
       100% { background-position: -10000px 0; }
     }
 
+    .flower {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background: url('https://i.ibb.co/NKkQQ4F/flower.png') no-repeat center/cover;
+      animation: float 20s linear infinite;
+      opacity: 0.7;
+      z-index: 0;
+    }
+
+    @keyframes float {
+      from {transform: translateY(0);}
+      to {transform: translateY(100vh);}
+    }
+
     .heart-container {
       display: flex;
       flex-direction: column;
       align-items: center;
       text-align: center;
-      padding-top: 50px;
+      padding-top: 80px;
     }
 
     .big-heart {
@@ -69,19 +75,19 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      box-shadow: 0 0 20px rgba(0,0,0,0.2);
+      box-shadow: 0 0 20px rgba(0,0,0,0.3);
     }
 
     .big-heart img {
-      width: 150px;
-      height: 150px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
       object-fit: cover;
       border: 5px solid white;
     }
 
     h1 {
-      font-size: 2.5em;
+      font-size: 3em;
       color: #ffb6c1;
       margin: 20px 0 10px;
     }
@@ -89,12 +95,12 @@
     .message {
       background: #fff0f5;
       color: #333;
-      margin: 40px auto;
+      margin: 60px auto;
       width: 80%;
       padding: 30px;
       border-radius: 20px;
       box-shadow: 0 0 20px rgba(255,105,180,0.2);
-      font-size: 1.2em;
+      font-size: 1.3em;
       position: relative;
     }
 
@@ -151,6 +157,7 @@
   <audio autoplay loop>
     <source src="https://www.bensound.com/bensound-music/bensound-love.mp3" type="audio/mp3">
   </audio>
+
   <div class="stars"></div>
   <div class="clouds"></div>
   <div class="flower" style="left: 10%; animation-delay: 0s;"></div>
@@ -160,9 +167,9 @@
   <div class="flower" style="left: 90%; animation-delay: 8s;"></div>
 
   <div class="heart-container">
-    <h1>ily my aaduuu ❤️</h1>
+    <h1>I Love You ❤️</h1>
     <div class="big-heart">
-      <img src="https://raw.githubusercontent.com/ardhiraka/images/main/couple.jpg" alt="us">
+      <img src="https://i.ibb.co/sJXTyhW/couple.png" alt="us">
     </div>
   </div>
 
@@ -174,19 +181,19 @@
       With every glance, you steal my heart,<br>
       In your love, I find my art."
     </div>
-    <img src="https://raw.githubusercontent.com/ardhiraka/images/main/sticker-bunny.png" class="sticker" />
+    <img src="https://i.ibb.co/fQnWYJG/sticker-bunny.png" class="sticker" />
   </div>
 
   <div class="confess-buttons">
-    <button class="btn" onclick="sayYes()">YES ;></button>
-    <button class="btn" id="noBtn" onmouseover="moveNo()">NO :<</button>
+    <button class="btn" onclick="sayYes()">YES 💘</button>
+    <button class="btn" id="noBtn" onmouseover="moveNo()">NO 😝</button>
   </div>
 
   <script>
     function sayYes() {
       document.body.innerHTML = `
         <div class="heart-container">
-          <h1>Yay! You said YES! :> </h1>
+          <h1>Yay! You said YES! 🥰</h1>
           <p style="font-size:1.5em;">You just made me the happiest human in the galaxy!</p>
           <img src="https://media.giphy.com/media/111ebonMs90YLu/giphy.gif" width="300" />
         </div>
